@@ -16,4 +16,4 @@ class TestItemForm(TestCase):
 
     def test_fields_shown_are_only_those_in_form_metaclass(self):
         form = ItemForm()
-        self.assertEqual(form.Meta.fields, ['name','done'])
+        self.assertEqual(form.Meta.fields, ['name', 'done'])
