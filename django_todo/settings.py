@@ -26,7 +26,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 
-ALLOWED_HOSTS = ['romans-hello-django-todo.herokuapp.com']
+# ALLOWED_HOSTS = ['romans-hello-django-todo.herokuapp.com']
+ALLOWED_HOSTS = [os.environ.get("HEROKU_HOSTNAME")]
 DEBUG = True
 SECRET_KEY = os.environ.get("SECRET_KEY", "")
 
